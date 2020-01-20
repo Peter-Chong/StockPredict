@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D5F7C7E68DEC40E18F16C3D /* Pods_StockPredict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112906D998570C4225915473 /* Pods_StockPredict.framework */; };
 		E8CD2F7623D62EC0006B94CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CD2F7523D62EC0006B94CF /* AppDelegate.swift */; };
 		E8CD2F7823D62EC0006B94CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CD2F7723D62EC0006B94CF /* SceneDelegate.swift */; };
 		E8CD2F7A23D62EC0006B94CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CD2F7923D62EC0006B94CF /* ViewController.swift */; };
@@ -72,6 +73,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		112906D998570C4225915473 /* Pods_StockPredict.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockPredict.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79B873DD7B0227C3B3C9E6AF /* Pods-StockPredict.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPredict.release.xcconfig"; path = "Target Support Files/Pods-StockPredict/Pods-StockPredict.release.xcconfig"; sourceTree = "<group>"; };
+		DFA09EFE4F85682C6F23C926 /* Pods-StockPredict.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPredict.debug.xcconfig"; path = "Target Support Files/Pods-StockPredict/Pods-StockPredict.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CD2F7223D62EC0006B94CF /* StockPredict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockPredict.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CD2F7523D62EC0006B94CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8CD2F7723D62EC0006B94CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,12 +95,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E7ACEB23D63F4A0064B74A /* SwifteriOS.framework in Frameworks */,
+				2D5F7C7E68DEC40E18F16C3D /* Pods_StockPredict.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C83C782584613CC0E0A0A1C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFA09EFE4F85682C6F23C926 /* Pods-StockPredict.debug.xcconfig */,
+				79B873DD7B0227C3B3C9E6AF /* Pods-StockPredict.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E8CD2F6923D62EC0006B94CF = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +119,7 @@
 				E8CD2F7423D62EC0006B94CF /* StockPredict */,
 				E8CD2F7323D62EC0006B94CF /* Products */,
 				E8E7ACEA23D63F4A0064B74A /* Frameworks */,
+				C83C782584613CC0E0A0A1C2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +162,7 @@
 		E8E7ACEA23D63F4A0064B74A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				112906D998570C4225915473 /* Pods_StockPredict.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,10 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8CD2F8923D62EC2006B94CF /* Build configuration list for PBXNativeTarget "StockPredict" */;
 			buildPhases = (
+				4D0D26BFD5C49BD691449FB7 /* [CP] Check Pods Manifest.lock */,
 				E8CD2F6E23D62EC0006B94CF /* Sources */,
 				E8CD2F6F23D62EC0006B94CF /* Frameworks */,
 				E8CD2F7023D62EC0006B94CF /* Resources */,
 				E8E7ACED23D63F4A0064B74A /* Embed Frameworks */,
+				24F2B325AC9C7F5E04ADFE2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,6 +279,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24F2B325AC9C7F5E04ADFE2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockPredict/Pods-StockPredict-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockPredict/Pods-StockPredict-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockPredict/Pods-StockPredict-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D0D26BFD5C49BD691449FB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockPredict-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8CD2F6E23D62EC0006B94CF /* Sources */ = {
@@ -412,6 +473,7 @@
 		};
 		E8CD2F8A23D62EC2006B94CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA09EFE4F85682C6F23C926 /* Pods-StockPredict.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -429,6 +491,7 @@
 		};
 		E8CD2F8B23D62EC2006B94CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79B873DD7B0227C3B3C9E6AF /* Pods-StockPredict.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

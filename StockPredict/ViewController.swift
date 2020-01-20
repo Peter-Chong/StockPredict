@@ -9,6 +9,7 @@
 import UIKit
 import SwifteriOS
 import CoreML
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
@@ -23,10 +24,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let prediction = try! sentimentClassifier.prediction(text: <#T##String#>)
+//        let prediction = try! sentimentClassifier.prediction(text: "@Apple is bad")
         
-        swifter.searchTweet(using: <#T##String#>,lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
-            print(results)
+        swifter.searchTweet(using: "@Apple",lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
+            
+            var tweets = [String]()
+            
+            for i in 0..<100 {
+                if let tweet = results[i]["full_text"].string {
+                    tweets.append(tweet)
+                }
+            }
+            
         }) { (error) in
             print("There was an error with API request, \(error)")
         }
