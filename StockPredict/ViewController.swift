@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        let prediction = try! sentimentClassifier.prediction(text: <#T##String#>)
+        
         swifter.searchTweet(using: <#T##String#>,lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
             print(results)
         }) { (error) in
